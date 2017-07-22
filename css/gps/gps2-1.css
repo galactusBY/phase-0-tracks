@@ -1,3 +1,41 @@
 body {
-    background-color: green;
+  background-image: url(https://i.ytimg.com/vi/9udYi7exojk/maxresdefault.jpg)
+}
+
+header {
+  border: 5px solid black;
+  text-align: center;
+  background-color: yellow;
+  margin-bottom: 8px;
+  font: 20px tahoma;
+}
+
+footer {
+  border: 5px solid black;
+  text-align: center;
+  background-color: yellow;
+  margin-top: 8px;
+  font: italic 15px tahoma;
+}
+
+.column-1 {
+  background-color: green;
+  display: inline-block;
+  width: 49%;
+  vertical-align: text-top;
+  border: 5px solid black;
+  padding: 2%;
+  box-sizing: border-box;
+  font: 15px helvetica;
+}
+
+.column-2 {
+  background-color: red;
+  display: inline-block;
+  width: 50%;
+  vertical-align: text-top;
+  border: 5px solid black;
+  padding: 2%;
+  box-sizing: border-box;
+  font: 15px helvetica;
 }
