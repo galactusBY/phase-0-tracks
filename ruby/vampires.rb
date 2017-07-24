@@ -25,7 +25,7 @@ until interviews == 0
   total = 0
   current_year = 2017
 
-  if fullname == ("Drake Cula" || "Tu Fang")
+  if fullname == "Drake Cula" || fullname == "Tu Fang"
       total += +4
   else
       total += +0
@@ -40,14 +40,14 @@ until interviews == 0
         total += +1
     end
 
-      if garlic == ("y" || "yes")
+      if garlic == "y" || garlic == "yes"
           total += +0
-      elsif garlic == ("n" || "no")
+      elsif garlic == "n" || garlic == "no"
           total += +1
       end
-        if insurance == ("y" || "yes")
+        if insurance == "y" || insurance == "yes"
             total += +0
-        elsif insurance == ("n" || "no")
+        elsif insurance == "n" || insurance == "no"
             total += +1
         end
           if total >= 4
