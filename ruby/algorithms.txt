@@ -1,0 +1,25 @@
+Elevator Task:
+
+Start at the lobby floor 
+Select the UP bottom
+Wait for an elevator to arrive
+Go into the elevator doorway when it opens
+Select the floor you wish to go to 
+Press the button with the matching numeric value of the desired floor 
+Wait till you get to the floor you selected
+Once you are on the floor you selected walk through the elevator doorway
+
+Real-Life Algorithm: Brushing Your Teeth
+
+-Let mouth equal top_row and bottom_row. 
+-top_row has a range of 0-15
+-bottom_row has a range of 16-32
+-Let a single integer correspond to a single tooth
+—total_teeth = [0..32]
+-Start by positioning the bristle end of the toothbrush on #0 of top_row 
+-For each integer move the bristles from either end of the brush so that the ending point of the bristles meet the ending point of the tooth at an angle parallel to the tooth
+-Circumnavigate a full semi-sphere maintaining the same motion and return to starting point 
+-Move forwards one integer when finished 
+-Stop when range of total_teeth is exceeded
+
+
