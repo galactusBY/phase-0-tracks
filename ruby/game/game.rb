@@ -6,10 +6,14 @@
 
 # -------------GAME------------------
 #Set word based off user initial input
-#convert to array with split
+#use split
 #set guesses to iterate through split array of word and match each letter as == or != to the use input
 #user gets number of guesses equal to array length
 #have user guesses populate a separate array and make condition that if user's == value in the array then to loop back to the prompt asking the user to guess a letter
 #print visual representation of the blank spaces of the word
 #print message if they loose or win
 #exit
+
+Puts "Give me a word."
+word = gets.chomp
+word.split(//)
