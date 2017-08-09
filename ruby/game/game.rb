@@ -31,11 +31,11 @@ end
 # while attempts < word_array.length + 2
 loop do
   puts "GUESS A LETTER!"
-  puts "You have #{attempts} left."
+  puts "You have #{attempts} attempts left."
   p feedback_array
   guess = gets.chomp.downcase
   result = word_array.include?(guess)
-    if result == true && feedback_array == word_array
+    if feedback_array == word_array
       puts "You won!"
       break
     elsif result == true && feedback_array != word_array
