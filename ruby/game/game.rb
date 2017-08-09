@@ -13,7 +13,46 @@
 #print visual representation of the blank spaces of the word
 #print message if they loose or win
 #exit
+# ["t", "a", "y", "l", "o", "r"]
 
-Puts "Give me a word."
-word = gets.chomp
-word.split(//)
+#get word from user input and lowercase the string
+puts "Welcome to my game. Please give me a word."
+word = gets.chomp.downcase
+word_array = word.split(//)
+attempts = word_array.length + 2
+feedback_array = []
+
+#generates array of "-" equal to word length and convert to string (.join)
+word_array.each_index do |x|
+  feedback_array = Array.new((x + 1), "-")
+end
+
+#When a user submits a guess
+# while attempts < word_array.length + 2
+loop do
+  puts "GUESS A LETTER!"
+  puts "You have #{attempts} left."
+  p feedback_array
+  guess = gets.chomp.downcase
+  result = word_array.include?(guess)
+    if result == true && feedback_array == word_array
+      puts "You won!"
+      break
+    elsif result == true && feedback_array != word_array
+      var = word_array.index(guess)
+      feedback_array[var] = guess
+      attempts -= 1
+    else result == false
+      puts "Try again..."
+      attempts -= 1
+    end
+end
+
+
+#loop until attempts > (word_array.length + 2)
+
+#if true && feedback_array == word_array
+# end game
+
+#Issues:
+# Need to account for two of the same letter
