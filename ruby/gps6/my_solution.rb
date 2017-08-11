@@ -1,7 +1,7 @@
 # Virus Predictor
 
 # I worked on this challenge by myself.
-# We spent [#] hours on this challenge.
+# We spent 1.25 hours on this challenge.
 
 # EXPLANATION OF require_relative
 #Links the code of one file on top of the code of another file.
@@ -88,4 +88,12 @@ STATE_DATA.each do |state_name, state_hash|
 end
 
 #=======================================================================
-# Reflection Section
+# The main two differences in the hash syntax is that the parent hash is using a string as it's key and the nested hash is using symbols for it's key.
+
+# Require_relative allows you to link a specific ruby file into another ruby file as if they were both the same. Using just Require will actually allow more searching to occur when the program is trying to find the linked doc, such as it will search through ruby's directories.
+
+# You can iterate through a hash by calling on the .each method with will look through each layer of the hash and return that value. You need to be able to point the iteration to right nested data structures by using the nested keys to access their values.
+
+#When refactoring the methods it became known that there was a redundancy with the argument being fed into the methods. All the variable inside the method where instance variable and could be directly accessed anywhere in the class. Therefore the need to directly feed that information into the methods as arguments was unnecessary.
+
+# I feel like in this GPS I was able to better understand how to iterate through nested hashes, learned about the use of Private methods, better understood how to refactor variables within a method as to be less taxing in their execution, and how to call on multiple methods using just one method.
