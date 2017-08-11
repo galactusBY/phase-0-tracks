@@ -21,32 +21,36 @@ word = gets.chomp.downcase
 word_array = word.split(//)
 attempts = word_array.length + 2
 feedback_array = []
-
-#generates array of "-" equal to word length and convert to string (.join)
+guess_array = []
 word_array.each_index do |x|
   feedback_array = Array.new((x + 1), "-")
 end
 
-#When a user submits a guess
-# while attempts < word_array.length + 2
-loop do
+while feedback_array != word_array && attempts > 0
   puts "GUESS A LETTER!"
   puts "You have #{attempts} attempts left."
   p feedback_array
+
   guess = gets.chomp.downcase
+
   result = word_array.include?(guess)
-    if feedback_array == word_array
-      puts "You won!"
-      break
-    elsif result == true && feedback_array != word_array
+  multi_guess = guess_array.include?(guess)
+
+  if multi_guess
+    puts "You guessed this already"
+    elsif result == true
       var = word_array.index(guess)
       feedback_array[var] = guess
       attempts -= 1
-    else result == false
+    else #result == false
       puts "Try again..."
       attempts -= 1
     end
-end
+   if feedback_array == word_array
+      puts "You won!"
+      t=1
+      break
+    end
 
 
 #loop until attempts > (word_array.length + 2)
