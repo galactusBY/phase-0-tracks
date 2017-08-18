@@ -3,6 +3,20 @@
 // add up the letters in each part of the array value
 // create a method that will compare those values and return that which has the longest amount of chars and gives it as the longest word/phrase
 
+var ary = ["dog", "that", "house"];
+
+var word_length = 0;
+var longest_word;
+
+for (var i = 0; i < ary.length; i++ ) {
+  if (ary[i].length > word_length){
+    var word_length = ary[i].length;
+    var longest_word = ary[i];
+  }
+}
+
+console.log(longest_word)
+
 // Release 1
 // Split all hash key values and put them into an array
 // split all hash values and put them into an array
@@ -11,6 +25,9 @@
 // print the comparison results as a true or false statement
 // possibly print the result to a string for the user to statement
 
+
+
+
 // Release 2
 // // Create a method that will take an integer and give back a random series of word that is the same length as that integer's value.
 // Max chars length of 10 and Min of 1
@@ -18,3 +35,4 @@
 // use a random letter generator to populate the chars in a word
 // send that completed word to an array
 // find a way to randomly generate a number between 1-10 and feed that into the method for creating a random word.
+
