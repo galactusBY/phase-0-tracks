@@ -4,7 +4,7 @@
 # The guessing player receives continual feedback on the current state of the word. So if the secret word is "unicorn", the user will start out seeing something like "_ _ _ _ _ _ _", which would become "_ _ _ c _ _ _" after the user enters a guess of "c".
 # The user should get a congratulatory message if they win, and a taunting message if they lose.
 
-# -------------GAME------------------
+# -------------------------------
 #Set word based off user initial input
 #use split
 #set guesses to iterate through split array of word and match each letter as == or != to the use input
